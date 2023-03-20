@@ -1,241 +1,241 @@
-{% extends "base.html" %} {% block content %}{% load static %} 
+{% extends "base.html" %} {% block content %}{% load static %}
 <body class="home">
-	<section class="content">
-		<div class="main">
-			<div class="main-header">
-				
-				<h1>Student Form</h1>
-			</div>
-		</div>
+  <section class="content">
+    <div class="main">
+      <div class="main-header">
+        <h1>Student Form</h1>
+      </div>
+    </div>
 
-		<section class="post_form">
-			<form action="" method="POST" enctype="multipart/form-data">
-				{% csrf_token  %}
-				
-				
+    <section class="post_form">
+      <form action="" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
 
-				<div class="input_area">
-					<input
-						type="text"
-						name="name"
-						placeholder="Name"
-						required
-						style="background-color: #e6fef7"
-					/>
-					<input
-						type="text"
-						name="gender"
-						placeholder="Gender"
-						required
-						style="background-color: #e6fef7"
-					/>
-					<input
-						type="text"
-						name="adhar_num"
-						placeholder="Aadhar num"
-						required
-						style="background-color: #e6fef7"
-					/>
-					<input
-						type="date"
-						name="dob"
-						placeholder="DD/MM/YYYY"
-						required
-						style="background-color: #e6fef7"
-					/>
-					<input
-						type="text"
-						name="identification_mark"
-						placeholder="identification_mark"
-						required
-						style="background-color: #e6fef7"
-					/>
-					<input
-						type="text"
-						name="category"
-						placeholder="category"
-						required
-						style="background-color: #e6fef7"
-					/>
-					<input
-						type="text"
-						name="height"
-						placeholder="height"
-						required
-						style="background-color: #e6fef7"
-					/>
-					<input
-						type="text"
-						name="weight"
-						placeholder="weight"
-						required
-						style="background-color: #e6fef7"
-					/>
-					<input
-						type="text"
-						name="email"
-						placeholder="email"
-						required
-						style="background-color: #e6fef7"
-					/>
-					<input
-						type="text"
-						name="phone_num"
-						placeholder="phone_num"
-						required
-						style="background-color: #e6fef7"
-					/>
-					<input
-						type="text"
-						name="address"
-						placeholder="address"
-						required
-						style="background-color: #e6fef7"
-					/>
-					<input
-						type="text"
-						name="father_name"
-						placeholder="father_name"
-						required
-						style="background-color: #e6fef7"
-					/>
-					<input
-						type="text"
-						name="father_adhar_num"
-						placeholder="father_adhar_num"
-						required
-						style="background-color: #e6fef7"
-					/>
-					<input
-						type="text"
-						name="father_phone_num"
-						placeholder="father_phone_num"
-						required
-						style="background-color: #e6fef7"
-					/>
-					<input
-						type="text"
-						name="father_qualification"
-						placeholder="father_qualification"
-						required
-						style="background-color: #e6fef7"
-					/>
-					<input
-						type="text"
-						name="father_profession"
-						placeholder="father_profession"
-						required
-						style="background-color: #e6fef7"
-					/>
-					<input
-						type="text"
-						name="father_designation"
-						placeholder="father_designation"
-						required
-						style="background-color: #e6fef7"
-					/>
-					<input
-						type="text"
-						name="father_email"
-						placeholder="father_email"
-						required
-						style="background-color: #e6fef7"
-					/>
-					<input
-						type="text"
-						name="mother_name"
-						placeholder="mother_name"
-						required
-						style="background-color: #e6fef7"
-					/>
-					<input
-						type="text"
-						name="mother_adhar_num"
-						placeholder="mother_adhar_num"
-						required
-						style="background-color: #e6fef7"
-					/>
-					<input
-						type="text"
-						name="mother_phone_num"
-						placeholder="mother_phone_num"
-						required
-						style="background-color: #e6fef7"
-					/>
-					<input
-						type="text"
-						name="mother_qualification"
-						placeholder="mother_qualification"
-						required
-						style="background-color: #e6fef7"
-					/>
-					<input
-						type="text"
-						name="mother_profession"
-						placeholder="mother_profession"
-						required
-						style="background-color: #e6fef7"
-					/>
-					<input
-						type="text"
-						name="mother_designation"
-						placeholder="mother_designation"
-						required
-						style="background-color: #e6fef7"
-					/>
-					<input
-						type="text"
-						name="mother_email"
-						placeholder="mother_email"
-						required
-						style="background-color: #e6fef7"
-					/>
-					
-					<input
-						type="text"
-						name="Student_class"
-						placeholder="Student_class"
-						required
-						style="background-color: #e6fef7"
-					/>
-					<input
-						type="text"
-						name="section"
-						placeholder="section"
-						required
-						style="background-color: #e6fef7"
-					/>
-					<input
-						type="date"
-						name="doj"
-						placeholder="DD/MM/YYYY"
-						required
-						style="background-color: #e6fef7"
-					/>
-					
-					
-					
+        <div class="input_area">
+          <div>
+            <h1>Student Details</h1>
+            <input
+              type="text"
+              name="name"
+              placeholder="Name"
+              required
+              style="background-color: #e6fef7"
+            />
+            <input
+              type="text"
+              name="gender"
+              placeholder="Gender"
+              required
+              style="background-color: #e6fef7"
+            />
+            <input
+              type="text"
+              name="adhar_num"
+              placeholder="Aadhar num"
+              required
+              style="background-color: #e6fef7"
+            />
+            <input
+              type="date"
+              name="dob"
+              placeholder="DD/MM/YYYY"
+              required
+              style="background-color: #e6fef7"
+            />
+            <input
+              type="text"
+              name="identification_mark"
+              placeholder="identification_mark"
+              required
+              style="background-color: #e6fef7"
+            />
+            <input
+              type="text"
+              name="category"
+              placeholder="category"
+              required
+              style="background-color: #e6fef7"
+            />
+            <input
+              type="text"
+              name="height"
+              placeholder="height"
+              required
+              style="background-color: #e6fef7"
+            />
+            <input
+              type="text"
+              name="weight"
+              placeholder="weight"
+              required
+              style="background-color: #e6fef7"
+            />
+            <input
+              type="text"
+              name="email"
+              placeholder="email"
+              required
+              style="background-color: #e6fef7"
+            />
+            <input
+              type="text"
+              name="phone_num"
+              placeholder="phone_num"
+              required
+              style="background-color: #e6fef7"
+            />
+            <input
+              type="text"
+              name="address"
+              placeholder="address"
+              required
+              style="background-color: #e6fef7"
+            />
+          </div>
+          <div>
+            <h1>Parents Details</h1>
 
-					<div class="bottom-area">
-						<div class="mb-0">
-							<input
-								class="form-control form-control-sm"
-								name="document"
-								type="file"
-							/>
-						</div>
-					{% csrf_token %}
-						<button class="btn" type="submit">Submit</button>
-					</div>
-				</div>
-			</form>
-		</section>
-		<div class="space"></div>
-		<section class="posts">
-			<ul>
-				{% for post in posts %}
-				<li>
-					<!-- <img
+            <input
+              type="text"
+              name="father_name"
+              placeholder="father_name"
+              required
+              style="background-color: #e6fef7"
+            />
+            <input
+              type="text"
+              name="father_adhar_num"
+              placeholder="father_adhar_num"
+              required
+              style="background-color: #e6fef7"
+            />
+            <input
+              type="text"
+              name="father_phone_num"
+              placeholder="father_phone_num"
+              required
+              style="background-color: #e6fef7"
+            />
+            <input
+              type="text"
+              name="father_qualification"
+              placeholder="father_qualification"
+              required
+              style="background-color: #e6fef7"
+            />
+            <input
+              type="text"
+              name="father_profession"
+              placeholder="father_profession"
+              required
+              style="background-color: #e6fef7"
+            />
+            <input
+              type="text"
+              name="father_designation"
+              placeholder="father_designation"
+              required
+              style="background-color: #e6fef7"
+            />
+            <input
+              type="text"
+              name="father_email"
+              placeholder="father_email"
+              required
+              style="background-color: #e6fef7"
+            />
+            <input
+              type="text"
+              name="mother_name"
+              placeholder="mother_name"
+              required
+              style="background-color: #e6fef7"
+            />
+            <input
+              type="text"
+              name="mother_adhar_num"
+              placeholder="mother_adhar_num"
+              required
+              style="background-color: #e6fef7"
+            />
+            <input
+              type="text"
+              name="mother_phone_num"
+              placeholder="mother_phone_num"
+              required
+              style="background-color: #e6fef7"
+            />
+            <input
+              type="text"
+              name="mother_qualification"
+              placeholder="mother_qualification"
+              required
+              style="background-color: #e6fef7"
+            />
+            <input
+              type="text"
+              name="mother_profession"
+              placeholder="mother_profession"
+              required
+              style="background-color: #e6fef7"
+            />
+            <input
+              type="text"
+              name="mother_designation"
+              placeholder="mother_designation"
+              required
+              style="background-color: #e6fef7"
+            />
+            <input
+              type="text"
+              name="mother_email"
+              placeholder="mother_email"
+              required
+              style="background-color: #e6fef7"
+            />
+          </div>
+          <div>
+            <h1>Achademic Details</h1>
+
+            <input
+              type="text"
+              name="Student_class"
+              placeholder="Student_class"
+              required
+              style="background-color: #e6fef7"
+            />
+            <input
+              type="text"
+              name="section"
+              placeholder="section"
+              required
+              style="background-color: #e6fef7"
+            />
+            <input
+              type="date"
+              name="doj"
+              placeholder="DD/MM/YYYY"
+              required
+              style="background-color: #e6fef7"
+            />
+
+            <input
+              name="document"
+              type="file"
+			  style="background-color: #e6fef7; border:1px solid black"
+            />
+          </div>
+          {% csrf_token %}
+          <button class="btn" type="submit">Submit</button>
+        </div>
+      </form>
+    </section>
+    <div class="space"></div>
+    <section class="posts">
+      <ul>
+        {% for post in posts %}
+        <li>
+          <!-- <img
 						class="menu_icon js-menu-icon"
 						src="{% static 'img/menu.png' %}"
 					/>
@@ -247,7 +247,7 @@
 					<div class="logo">
 						<img src="{% static 'img/profile-user.png' %}" />
 					</div> -->
-					<!-- <div class="name_body">
+          <!-- <div class="name_body">
 						<p>Student Name: {{ post.name }}</p>
 						<div class="datetime">{{ post.created_at }}</div> 
 						<p>Aadhar Num: {{ post.adhar_num }}</p>
@@ -286,20 +286,18 @@
 								class="post-img"
 								src="{{ post.document.url}}" style="width: 100%;"
 							/> -->
-						{% endif %}
-						
-						
-				</li>
+          {% endif %}
+        </li>
 
-				{% endfor %}
-			</ul>
-		</section>
-		<script
-			src="https://code.jquery.com/jquery-3.6.0.js"
-			integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
-			crossorigin="anonymous"
-		></script>
-		<script src="{% static 'js/posts.js' %}"></script>
-	</section>
+        {% endfor %}
+      </ul>
+    </section>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.js"
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+      crossorigin="anonymous"
+    ></script>
+    <script src="{% static 'js/posts.js' %}"></script>
+  </section>
 </body>
 {% endblock %}
