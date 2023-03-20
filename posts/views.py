@@ -63,4 +63,15 @@ def index(request):
     
     # show
     return render(request, 'posts.html',
-                  {'students': st
+                  {'students': students})
+
+    
+
+
+
+
+
+
+
+
+
