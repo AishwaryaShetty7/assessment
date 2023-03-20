@@ -32,7 +32,7 @@ def index(request):
             n_pre = std_name[:3].upper()
             d_pre = datetime.now().strftime('%d%m%y')
             en_id = d_pre + n_pre + r_num
-            message = 'Dear'+ ' ' + std_name +"\n\n" +'You got enroll in Dummy Schoolyour Enrollment ID is'+'  '+ en_id +' ' +'lets provide us the hard documents for the future references.'+'\n\n'+'Team ' +'\n'+ 'Dummy School '
+            message = 'Dear'+ ' ' + std_name +"\n\n" +'You got enroll in Dummy School your Enrollment ID is'+'  '+ en_id +' ' +'lets provide us the hard documents for the future references.'+'\n\n'+'Team ' +'\n'+ 'Dummy School '
 
             admin_msg = 'Dear Admin,' + '\n\n' + 'You got new student'+' ' + std_name + ' ' +'enrolled in class' +' '+ S_class + ' '+', section' + ' '+ S_section + ' '+ 'with enrollment id ' + en_id + '\n\n''Bot Msg.'
 

@@ -11,12 +11,15 @@ class Post(models.Model):
         db_table = 'post'
 
     name = models.CharField(
-        'Name', blank=False, null=False, max_length=14, db_index=True, default='Anonymus'
+        'Name', blank=False, null=False, max_length=14, db_index=True
     )
-    adhar_num = models.CharField(
-        'Adhar Number', blank=False,null=False, max_length=255
+    gender = models.CharField(
+        'Gender', blank=False, null=False, max_length=14, db_index=True
     )
-    dob = models.CharField(
+    adhar_num = models.PositiveIntegerField(
+        'Adhar Number', blank=False,null=False
+    )
+    dob = models.DateTimeField(
         'Date of Birth', blank=False,null=False, max_length=255
     )
     identification_mark = models.CharField(
@@ -31,7 +34,7 @@ class Post(models.Model):
     weight = models.CharField(
         'Weight', blank=False, null=False, max_length=255
     )
-    email = models.CharField(
+    email = models.EmailField(
         'Email', blank=False, null=False, max_length=255
     )
     phone_num = models.CharField(
@@ -43,11 +46,11 @@ class Post(models.Model):
     father_name = models.CharField(
         'Father Name', blank=False, null=False, max_length=255
     )
-    father_adhar_num = models.CharField(
-        'Father Adhar Number', blank=False,null=False, max_length=255
+    father_adhar_num = models.PositiveIntegerField(
+        'Father Adhar Number', blank=False,null=False
     )
-    father_phone_num = models.CharField(
-        'Father Phone Number', blank= False, null= False, max_length=255
+    father_phone_num = models.PositiveIntegerField(
+        'Father Phone Number', blank= False, null= False
     )
     father_qualification = models.CharField(
         'Father Qualification', blank=False, null=False, max_length=255
@@ -58,17 +61,17 @@ class Post(models.Model):
     father_designation =models.CharField(
         'Father Designation', blank=False, null=False, max_length=255
     )
-    father_email = models.CharField(
+    father_email = models.EmailField(
         'Father Email', blank=False, null=False, max_length=255
     )
     mother_name = models.CharField(
         'Mother Name', blank=False, null=False, max_length=255
     )
-    mother_adhar_num = models.CharField(
-        'Mother Adhar Number', blank=False,null=False, max_length=255
+    mother_adhar_num = models.PositiveIntegerField(
+        'Mother Adhar Number', blank=False,null=False
     )
-    mother_phone_num = models.CharField(
-        'Mother Phone Number', blank= False, null= False, max_length=255
+    mother_phone_num = models.PositiveIntegerField(
+        'Mother Phone Number', blank= False, null= False
     )
     mother_qualification = models.CharField(
         'Mother Qualification', blank=False, null=False, max_length=255
@@ -79,7 +82,7 @@ class Post(models.Model):
     mother_designation =models.CharField(
         'Mother Designation', blank=False, null=False, max_length=255
     )
-    mother_email = models.CharField(
+    mother_email = models.EmailField(
         'Mother Email', blank=False, null=False, max_length=255
     )
     random_num = models.AutoField(
@@ -91,13 +94,12 @@ class Post(models.Model):
     section =models.CharField(
         'Section', blank=False, null=False, max_length=12
     )
-    doj = models.CharField(
+    doj = models.DateTimeField(
         'Date of Join', blank=False, null=False, max_length=255
     )
     document = CloudinaryField(
         'Documents', blank= True, db_index=True
     )
-   
     created_at = models.DateTimeField(
         'Creation Date', blank=True, auto_now_add=True
     )
