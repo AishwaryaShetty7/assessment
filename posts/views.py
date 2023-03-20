@@ -48,7 +48,7 @@ def index(request):
                 'Got a new Student ',
                 admin_msg,
                 'aishwaryakp73@gmail.com',
-                ['aishwaryashetty731997@gmail.com'],
+                ['durganand.jha@habrie.com'],
                 fail_silently= False
             )
             # Redirect to Home
@@ -63,15 +63,4 @@ def index(request):
     
     # show
     return render(request, 'posts.html',
-                  {'students': students})
-
-    
-
-
-
-
-
-
-
-
-
+                  {'students': st
