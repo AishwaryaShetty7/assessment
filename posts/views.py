@@ -24,6 +24,7 @@ def index(request):
             recipient_list = []    
             for data in Post.objects.all():
                 recipient_list.append(data.email)
+                mail_id = recipient_list[len(recipient_list)-1]
                 std_name = (data.name)
                 S_class = (data.Student_class)
                 S_section = (data.section)
@@ -39,14 +40,14 @@ def index(request):
             send_mail(
                 'Enrollment Details',
                 message,
-                'thejasbm22@gmail.com',
-                recipient_list,
+                'aishwaryakp73@gmail.com',
+                [mail_id],
                 fail_silently= False
             )
             send_mail(
                 'Got a new Student ',
                 admin_msg,
-                'thejasbm22@gmail.com',
+                'aishwaryakp73@gmail.com',
                 ['aishwaryashetty731997@gmail.com'],
                 fail_silently= False
             )
