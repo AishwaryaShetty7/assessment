@@ -8,5 +8,6 @@ from django.urls.resolvers import URLPattern#
 urlpatterns =[
     
     path('', views.index, name='index'),
+    path('upload_csv', views.upload_file, name='upload_csv')
    
 ]

@@ -6,6 +6,10 @@ from .forms import PostForm
 from django.shortcuts import render
 from django.core.mail import send_mail
 from datetime import datetime
+import csv
+from .forms import UploadFileForm
+from django.utils.datastructures import MultiValueDictKeyError
+
 
 
 # Create your views here.
@@ -48,7 +52,7 @@ def index(request):
                 'Got a new Student ',
                 admin_msg,
                 'aishwaryakp73@gmail.com',
-                ['durganand.jha@habrie.com'],
+                ['aishwaryashetty731997@gmail.com'],
                 fail_silently= False
             )
             # Redirect to Home
@@ -64,6 +68,48 @@ def index(request):
     # show
     return render(request, 'posts.html',
                   {'students': students})
+
+
+
+
+def upload_file(request):
+
+    # if request.method == 'POST':
+        
+    #     # try:
+    #     #     csv_file = request.FILES['file']
+    #     # except MultiValueDictKeyError:
+
+    #     #     decoded_file = csv_file.read().decode('utf-8').splitlines()
+    #     #     reader = csv.reader(decoded_file)
+    #     form = UploadFileForm(request.POST, request.FILES)
+    #     if form.is_valid():
+    #         file = request.FILES['file']
+    #         # read the data from the CSV file
+    #         data = csv.reader(file)
+    #         for row in data:
+    #             post = Post(name=row[0], email=row[1], student_class=row[2], section = row[3])
+    #             post.save()
+    #         return render(request, 'us.html')
+    # else:
+    #     form = UploadFileForm()
+    # return render(request, 'edit.html')
+    if request.method == 'POST':
+        form = UploadFileForm(request.POST, request.FILES)
+        if form.is_valid():
+            csv_file = request.FILES['csv_file']
+            decoded_file = csv_file.read().decode('utf-8')
+            csv_data = csv.reader(decoded_file.splitlines(), delimiter=',')
+            for row in csv_data:
+                post = Post.objects.get_or_create(
+                    name=row[0],
+                    email=row[1],
+                    student_class=row[2], 
+                    section = row[3]
+                )
+                post.save()
+            return render(request, 'us.html')
+    return render(request, 'edit.html')
 
     
 
